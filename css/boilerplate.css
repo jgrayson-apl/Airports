@@ -1,0 +1,250 @@
+html,
+body {
+  padding    : 0;
+  margin     : 0;
+  height     : 100%;
+  width      : 100%;
+  background : #242424;
+}
+
+body {
+  font-family : "Avenir Next W00", "Helvetica Nueu", "Segoe UI", sans-serif;
+}
+
+body:lang(ja) {
+  font-family : meiryo, "Avenir Next W00", "Helvetica Nueu", "Segoe UI", sans-serif;
+}
+
+.boilerplate-view {
+  padding : 0;
+  margin  : 0;
+  width   : 100%;
+  height  : 100%;
+}
+
+.boilerplate-loading-indicator {
+  display          : none;
+  height           : 100%;
+  width            : 100%;
+  z-index          : 500;
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  overflow         : hidden;
+  background-color : rgba(255, 255, 255, 0.4);
+}
+
+.boilerplate--loading .boilerplate-loading-indicator {
+  display    : block;
+  background : url(../images/loading.gif) no-repeat center center;
+}
+
+.boilerplate--error .boilerplate-loading-indicator {
+  display : block;
+}
+
+.boilerplate-loading-message {
+  background  : no-repeat top center;
+  padding-top : 60px;
+  width       : 100%;
+  position    : absolute;
+  z-index     : 2;
+  top         : 40%;
+  left        : 0;
+  text-align  : center;
+}
+
+#side-panel {
+  position : absolute;
+  top      : 0;
+  right    : 0;
+  width    : 350px;
+  height   : 100%;
+}
+
+#bottom-panel {
+  position         : absolute;
+  bottom           : 0;
+  left             : 0;
+  width            : 100%;
+  height           : 0;
+  background-color : #000F1A;
+}
+
+.ui-layout {
+  transition : all 500ms;
+}
+
+.ui-layout-center.open {
+  height     : calc(100% - 200px) !important;
+  transition : all 1ms;
+}
+
+.ui-layout-bottom.open {
+  height     : 200px !important;
+  transition : all 1ms;
+}
+
+#flight-plan-view {
+  width  : 100%;
+  height : 100%;
+}
+
+.ui-node {
+  padding : 10px;
+}
+
+.ui-node * {
+  line-height : unset;
+}
+
+.app-title {
+  font-size : 21pt;
+  color     : #65D2F4;
+}
+
+.app-title img {
+  cursor         : pointer;
+  vertical-align : middle;
+  height         : 35pt;
+  transition     : all 1s;
+}
+
+.boilerplate--loading .app-title img {
+  height     : 279px;
+  transition : all 1s;
+}
+
+.near-info-node {
+  width   : 320px;
+  padding : 10px;
+}
+
+.near-info-node * {
+  outline : none;
+}
+
+.near-info-heading {
+  padding       : 3px;
+  font-size     : 15pt;
+  border-bottom : solid 2px #65D2F4;
+}
+
+.near-info-label {
+  margin    : 3px 0 3px 6px;
+  height    : 1.1em;
+  font-size : 10pt;
+}
+
+.near-info-options {
+  margin     : 10px;
+  padding    : 5px;
+  background : #333;
+}
+
+.near-info-inputs {
+  margin  : 3px 0 0 0;
+  padding : 3px;
+}
+
+.near-info-inputs * {
+  vertical-align : middle;
+}
+
+.near-info-inputs label {
+  cursor    : pointer;
+  font-size : 9pt;
+}
+
+.near-info-inputs label:hover {
+  color : #65D2F4;
+}
+
+.near-info-cutoff {
+  margin  : 3px 0 0 0;
+  padding : 3px;
+}
+
+.near-info-cutoff * {
+  vertical-align : middle;
+}
+
+.near-info-cutoff input {
+  margin : 0 5px;
+}
+
+.near-info-content {
+  height         : 1.1em;
+  font-size      : 5em;
+  line-height    : 1.1;
+  vertical-align : middle;
+  text-align     : center;
+  color          : #65D2F4;
+  border         : solid 1px #65D2F4;
+}
+
+#near-info-overview {
+  pointer-events : none;
+  margin-top     : 5px;
+  height         : 250px;
+}
+
+#near-info-processing {
+  margin-top : 3px;
+  padding    : 5px;
+  font-size  : 0.8em;
+  font-style : italic;
+  color      : #ccc;
+  background : transparent;
+  transition : all 750ms;
+}
+
+#near-info-processing.updating {
+  background : rgba(101, 210, 244, 0.5);
+  color      : #fff;
+  transition : all 750ms;
+}
+
+.esri-view-width-xlarge .esri-popup__main-container {
+  width : 320px;
+}
+
+.esri-widget table tr td, .esri-widget table tr th {
+  padding   : 0 2px;
+  font-size : 9pt;
+}
+
+.sceneFly-view-tool .dijitButtonText {
+  color : #65D2F4;
+}
+
+.sceneFly-view-tool .dijitButtonNode {
+  background-color : #242424;
+}
+
+.sceneFly-view-tool.dijitHover .dijitButtonText {
+  color : #fff;
+}
+
+.sceneFly-view-tool.dijitHover .dijitButtonNode {
+  background-color : #333;
+}
+
+.sceneFly-view-tool.dijitChecked .dijitButtonText {
+  color : #fff;
+}
+
+.sceneFly-view-tool.dijitChecked .dijitButtonNode {
+  background-color : #65D2F4;
+}
+
+#compass-node {
+  position : absolute;
+  z-index  : 99;
+  top      : 80px;
+  left     : 80px;
+}
+
+.flight-plan-node:empty {
+  display : none;
+}
